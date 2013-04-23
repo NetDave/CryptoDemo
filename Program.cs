@@ -7,9 +7,16 @@ namespace CryptoDemo
 {
 	class Program
 	{
+		/// <summary>
+		/// Demonstration program that shows how to use the System.Security.Cryptography APIs
+		/// to perform symmetrical encryption and decryption using the 3DES algorithm.
+		/// 
+		/// Revision History:
+		/// 23-Apr-03 DaveC
+		///		Initial version to play with GitHub archiving.
+		/// </summary>
 		static void Main()
 		{
-
 			try
 			{
 				string _secret = "3599A59E-8F74-40FF-8A01-7BA4DE5B539E";
@@ -41,6 +48,13 @@ namespace CryptoDemo
 
 		}
 
+		/// <summary>
+		/// Encrypts a text string into a byte array using 3DES encryption.
+		/// </summary>
+		/// <param name="Data">Text to be encrypted</param>
+		/// <param name="Key">Symmetrical encryption key</param>
+		/// <param name="IV">Initialization vector</param>
+		/// <returns>Byte array of containing encrypted data.</returns>
 		public static byte[] EncryptTextToMemory(string Data, byte[] Key, byte[] IV)
 		{
 			try
@@ -81,6 +95,13 @@ namespace CryptoDemo
 
 		}
 
+		/// <summary>
+		/// Decrypts a byte array of data into a plain-text string using 3DES.
+		/// </summary>
+		/// <param name="Data">Data to be decrypted.</param>
+		/// <param name="Key">Key that was used to encrypt the data.</param>
+		/// <param name="IV">Initialization vector.</param>
+		/// <returns></returns>
 		public static string DecryptTextFromMemory(byte[] Data, byte[] Key, byte[] IV)
 		{
 			try
